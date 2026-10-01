@@ -13,7 +13,7 @@ def get_connection():
         cursorclass=MySQLdb.cursors.DictCursor,
         autocommit=False,
         ssl={"ca": 
-                Config.MySQL_SSL_CA
+                Config.MYSQL_SSL_CA
         },
         ssl_mode="VERIFY_CA"
     )
