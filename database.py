@@ -11,5 +11,9 @@ def get_connection():
         db=Config.MYSQL_DATABASE,
         charset="utf8mb4",
         cursorclass=MySQLdb.cursors.DictCursor,
-        autocommit=False
+        autocommit=False,
+        ssl={"ca": 
+                Config.MySQL_SSL_CA
+        },
+        ssl_mode="VERIFY_CA"
     )
